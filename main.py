@@ -16,7 +16,7 @@ app.add_middleware(
 
 # 1. تحميل الموديل - تأكدي إن ملف الـ .pt في نفس الفولدر
 # لو لسه معندكيش ملفك الخاص، اكتبي "yolov8n.pt" وهينزل لوحده للتجربة
-model = YOLO("YOLOv8n.pt") 
+model = YOLO("yolov8n.pt") 
 
 @app.get("/")
 def home():
@@ -43,3 +43,4 @@ async def predict(file: UploadFile = File(...)):
 
 
     return {"found": detections}
+
